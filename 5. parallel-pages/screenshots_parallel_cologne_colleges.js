@@ -36,7 +36,7 @@ const screenshotColleges = async (colleges, parallel) => {
     k++
     console.log('\nBatch ' + k + ' of ' + parallelBatches)
     // Launch and Setup Chromium
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({headless:false})
     // Fun with puppeteer
     const context = await browser.createIncognitoBrowserContext()
     const page = await context.newPage()

@@ -3,13 +3,13 @@
   "version": "1.0.1",
   "description": "Ready to run Puppeteer example from Checkly",
   "dependencies": {
-    "puppeteer": "2.0.0",
+    "puppeteer": "^7.0.4",
     "mocha": "^5.2.0"
   },
   "devDependencies": {
     "eslint": "^7.6.0",
-    "eslint-config-checkly": "0.0.5",
-    "eslint-plugin-mocha": "^4.12.1",
+    "eslint-config-checkly": "^0.2.5",
+    "eslint-plugin-mocha": "^4.ll -12.1",
     "file-system": "^2.2.2",
     "jest": "^21.2.1",
     "js-comments": "^0.5.4",
