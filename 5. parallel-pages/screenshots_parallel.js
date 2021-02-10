@@ -14,8 +14,9 @@ const parallel = 5;
             console.log('Page ID Spawned', i)
             promises.push(browser.newPage().then(async page => {
                 await page.setViewport({width: 1280, height: 800})
-                await page.goto('https://en.wikipedia.org/wiki/' + i)
+                await page.goto('https://www.baidu.com/s?wd=' + i)
                 await console.log('截图开始 ', i)
+                await page.bringToFront();
                 await page.screenshot({path: 'wikipedia_' + i + '.png'})
                 await console.log('截图结束 ', i)
             }))
