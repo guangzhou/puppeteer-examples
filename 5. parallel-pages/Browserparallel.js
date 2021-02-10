@@ -9,8 +9,8 @@ const parallel = 6;
 (async () => {
     const promises = []
 
-    function handle(i) {
-        return async () => {
+    async function handle(i) {
+        // return async () => {
             const browser = await puppeteer.launch({headless: false})
             const page = await browser.newPage();
             await page.setViewport({width: 1280, height: 800})
@@ -21,7 +21,7 @@ const parallel = 6;
             await console.log('截图结束 ', i)
             console.log('See screenshot: ' + i)
             await browser.close()
-        };
+        // };
     }
 
     for (let i = 0; i < parallel; i++) {
